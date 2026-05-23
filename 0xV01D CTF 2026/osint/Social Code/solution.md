@@ -31,6 +31,8 @@ Based on the challenge description, we can see that it is a shop named "social-c
 
 I referred to [this website](https://www.collegesidekick.com/study-docs/16331200) and found that a standard 3-letter domain extension (such as `.org`) looks like the receipt shown in the image below:
 
+![alt text](image.png)
+
 Upon closer inspection of the image provided in the challenge, the letter "D" is shifted back by one position. This indicates that the domain extension should be `.shop` instead of other common ones like `.com`.
 
 Next, I searched for it on the [Wayback Machine](https://web.archive.org/web/20250329141912/http://social-code.shop/) and was able to find the image name.
