@@ -1,9 +1,8 @@
 # MS DOS Plumber Writeup
 
 ## 題目描述
-```text
+
 My friend gave me a floppy with her modded version of Angel Ortega's game Space Plumber (1997), but she said there was something wrong with one of the files. Can you help me fix, build, and run it?
-```
 
 ## 解題思路
 
@@ -15,13 +14,14 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
 
     先mount看看有哪些磁碟：
 
-    ![alt text](pictures\image.png)
+    ![alt text](pictures/image.png)
 
     發現裡面有A、C、Z槽。
 
     Z:裡面沒有東西，只是一個虛擬系統碟。
 
     所以我跳到A:
+
     ```bash
     a:
     dir
@@ -29,11 +29,12 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
     dir
     ```
 
-    ![alt text](pictures\image-1.png)
+    ![alt text](pictures/image-1.png)
 
-    ![alt text](pictures\image-2.png)
+    ![alt text](pictures/image-2.png)
 
     因為裡面有makefile，所以我嘗試直接在\splumber裡面直接make，結果跳出：
+
     ```text
     'make' is a illegal command
     ```
@@ -42,7 +43,7 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
 
     A:裡面看起來沒有可以拿來build的工具，所以我到C:裡面看看，然後我在util裡面發現一些compiler：
 
-    ![alt text](pictures\image-3.png)
+    ![alt text](pictures/image-3.png)
 
     因為是zip檔，所以我先把他們全部解壓：
 
@@ -74,8 +75,8 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
 
     之後跳了很多error，noVNC又不給我上下移動terminal，所以我先從前面的開始看：
 
-    ![alt text](pictures\image-4.png)
-    
+    ![alt text](pictures/image-4.png)
+
     發現是src/sp_sb.c壞掉了。
 
     在terminal輸入：
@@ -104,7 +105,7 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
         : "%eax", "%ecx", "%edi");
     ```
 
-    ![alt text](pictures\image-5.png)
+    ![alt text](pictures/image-5.png)
 
     就可以了。
 
@@ -127,9 +128,8 @@ My friend gave me a floppy with her modded version of Angel Ortega's game Space 
     splumber
     ```
 
-    ![alt text](pictures\image-6.png)
+    ![alt text](pictures/image-6.png)
 
-    
 ## Flag
 
 ```text

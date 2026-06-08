@@ -1,9 +1,8 @@
 # MS DOS Plumber Writeup
 
 ## Description
-```text
+
 My friend gave me a floppy with her modded version of Angel Ortega's game Space Plumber (1997), but she said there was something wrong with one of the files. Can you help me fix, build, and run it?
-```
 
 ## Solution Walkthrough
 
@@ -15,13 +14,14 @@ Since I did not expect to solve this challenge at the time, I did not take scree
 
     First, check which drives are mounted:
 
-    ![alt text](pictures\image.png)
+    ![alt text](pictures/image.png)
 
     I found that there were A, C, and Z drives.
 
     There was nothing useful inside Z:. It was just a virtual system drive.
 
     So I switched to A:
+
     ```bash
     a:
     dir
@@ -29,11 +29,12 @@ Since I did not expect to solve this challenge at the time, I did not take scree
     dir
     ```
 
-    ![alt text](pictures\image-1.png)
+    ![alt text](pictures/image-1.png)
 
-    ![alt text](pictures\image-2.png)
+    ![alt text](pictures/image-2.png)
 
     Since there was a makefile inside, I tried running make directly inside \splumber, but it showed:
+
     ```text
     'make' is a illegal command
     ```
@@ -42,7 +43,7 @@ Since I did not expect to solve this challenge at the time, I did not take scree
 
     There did not seem to be any build tools inside A:, so I checked C:. Then I found some compilers inside util:
 
-    ![alt text](pictures\image-3.png)
+    ![alt text](pictures/image-3.png)
 
     Since they were zip files, I extracted all of them first:
 
@@ -74,7 +75,7 @@ Since I did not expect to solve this challenge at the time, I did not take scree
 
     After that, many errors appeared. Since noVNC did not allow me to scroll the terminal up and down, I started by checking the earlier errors:
 
-    ![alt text](pictures\image-4.png)
+    ![alt text](pictures/image-4.png)
 
     I found that src/sp_sb.c was broken.
 
@@ -104,7 +105,7 @@ Since I did not expect to solve this challenge at the time, I did not take scree
         : "%eax", "%ecx", "%edi");
     ```
 
-    ![alt text](pictures\image-5.png)
+    ![alt text](pictures/image-5.png)
 
     Then it should be fixed.
 
@@ -127,8 +128,7 @@ Since I did not expect to solve this challenge at the time, I did not take scree
     splumber
     ```
 
-    ![alt text](pictures\image-6.png)
-
+    ![alt text](pictures/image-6.png)
 
 ## Flag
 
