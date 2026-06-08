@@ -27,17 +27,17 @@ What coordinates was this photo taken at? Flag format is dalctf{\d+.\d{2}_\d+.\d
 
     我先打開Google Map，找到這條航道：
 
-    ![alt text](pictures\image.png)
+    ![alt text](pictures/image.png)
 
     沿著這條航道找到最有可能的拍攝地點，並用Google Earth確認地形：
 
-    ![alt text](pictures\image-1.png)
+    ![alt text](pictures/image-1.png)
 
-    ![alt text](pictures\image-2.png)
+    ![alt text](pictures/image-2.png)
 
     運氣很好，衛星有拍到船的痕跡，標在船的附近就能拿到flag。
 
-    ![alt text](pictures\image-3.png)
+    ![alt text](pictures/image-3.png)
     
 ## Flag
 

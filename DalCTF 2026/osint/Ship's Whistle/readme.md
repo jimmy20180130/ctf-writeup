@@ -27,17 +27,17 @@ What coordinates was this photo taken at? Flag format is dalctf{\d+.\d{2}_\d+.\d
 
     I first opened Google Maps and found this ferry route:
 
-    ![alt text](pictures\image.png)
+    ![alt text](pictures/image.png)
 
     Then I followed this route to find the most likely shooting location and used Google Earth to confirm the terrain:
 
-    ![alt text](pictures\image-1.png)
+    ![alt text](pictures/image-1.png)
 
-    ![alt text](pictures\image-2.png)
+    ![alt text](pictures/image-2.png)
 
     Luckily, the satellite imagery captured traces of the ship. By marking a point near the ship, we can get the flag.
 
-    ![alt text](pictures\image-3.png)
+    ![alt text](pictures/image-3.png)
 
 ## Flag
 
