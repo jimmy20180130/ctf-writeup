@@ -15,9 +15,11 @@ Flag Format: dalctf{Round_First_Last_Piece_Opening_Defence}
 ## 解題思路
 
 去 chess-results 查 [30th National Under-13 Boys Chess Championship](https://chess-results.com/Test/tnr228504.aspx?lan=1)，進去以後因為題目說對手的 rating 是 1900，查了一下發現是 Panda Sambit 這個人
+
 ![alt text](image.png)
 
 點它的名字 (要先點 show tournament details) 可以看到比賽紀錄，其中 round 5 就是 Joy Shah
+
 ![alt text](image-1.png)
 
 看棋譜判斷可以知道最後被吃掉的棋子是 rook，並且是 king's indian defence

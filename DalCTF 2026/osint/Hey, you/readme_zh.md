@@ -7,6 +7,7 @@ Hey, you. You're finally awake. You were trying to cross the border, right? Walk
 ## 解題思路
 
 看到圖片左上角有一個旗幟，以圖搜圖就可以發現他是《艾爾登法環：黃金樹幽影》裡面獨孤城的堡壘 (我沒玩所以我不確定)
+
 ![alt text](image.png)
 
 網站的部分我是在 google 上面查 `geoguessr elden ring`，第一個結果就是 lostgamer.io，而且介面和題目中的一模一樣

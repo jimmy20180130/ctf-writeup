@@ -7,9 +7,11 @@ My friend Carlos sent me this "war chant" audio, but I swear there was supposed 
 ## 解題思路
 
 拿到音檔以後我因為聽不懂葡萄牙文，所以就去找一個工具把歌詞提取出來 (大概是 `vamo que vamo meu inter`)，接下來去 google 搜尋，因為題目有說他是一段影片
+
 ![alt text](image.png)
 
 接著我就找到了[一段 instagram 影片](https://www.instagram.com/reels/DVEFLE1kbSN/)，可以看到影片上方有一段文字
+
 ![alt text](image-1.png)
 
 以圖搜圖以後可以看到[在類似地點拍的影片](https://www.tiktok.com/@gauchaesportes/video/7614961056774884628)，同時也提供了更多資訊，所以可以推斷出影片主題是 2026 Gauchão 決賽 Gre-Nal 前，訪問 Inter 球迷的影片
