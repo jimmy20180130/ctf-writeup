@@ -1,21 +1,14 @@
 # LCG Seed Squared Writeup
 
 ## Description
-```text
-I've been messing around with LCGs recently. I've forgotten the seed but I can remember I took something squared...
-```
 
-[LCGSeedSquared.py](https://dalctf2026.com/files/ac8457bd4520347e429cd7646c287947/LCGSeedSquared.py?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6Njk5fQ.aiYvvQ.6-fHsjDOwp-tFDAp-8iELQidSw4)
-[output.txt](https://dalctf2026.com/files/565ae9d4460f95400888df30cf28ad06/output.txt?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzQwfQ.aiYvvQ.fB9rlNdzGn5slvEL3lSha3iM3WE)
+I've been messing around with LCGs recently. I've forgotten the seed but I can remember I took something squared...
 
 ## Solution Walkthrough
 
 1. **Step 1**：
 
-    Since the challenge has a fixed flag format:
-    ```text
-    Dalctf{
-    ```
+    Since the challenge has a fixed flag format (`Dalctf{`)
 
     We can use the logic from LCGSeedSquared.py and brute-force rng(x) starting from D, which allows us to recover the value of x.
 

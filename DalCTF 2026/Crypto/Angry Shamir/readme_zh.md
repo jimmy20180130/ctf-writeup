@@ -1,18 +1,15 @@
 # Angry Shamir Writeup
 
 ## 題目描述
-```text
-Shamir would be very angry if he found out what I've done with his algorithm.
-```
 
-[Ciphertext.txt](https://dalctf2026.com/files/c0dcb461ae42d53186ba6b18c875b52a/Ciphertext.txt?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzM5fQ.aiYtDw.Y2FPpc6FyRUgNhnKQf2RG46jbAo)
+Shamir would be very angry if he found out what I've done with his algorithm.
 
 ## 解題思路
 
 1. **第一步**：
 
     e跟c看起來都沒有可以切入的弱點，代表問題一定出在n身上。
-    
+
     於是我先試試看n有沒有小質數，最後找到p=67。
 
     ```python

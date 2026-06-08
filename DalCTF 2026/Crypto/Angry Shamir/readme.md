@@ -1,11 +1,8 @@
 # Angry Shamir Writeup
 
 ## Description
-```text
-Shamir would be very angry if he found out what I've done with his algorithm.
-```
 
-[Ciphertext.txt](https://dalctf2026.com/files/c0dcb461ae42d53186ba6b18c875b52a/Ciphertext.txt?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzM5fQ.aiYtDw.Y2FPpc6FyRUgNhnKQf2RG46jbAo)
+Shamir would be very angry if he found out what I've done with his algorithm.
 
 ## Solution Walkthrough
 
