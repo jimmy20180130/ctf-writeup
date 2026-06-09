@@ -7,6 +7,7 @@ I went to China a while back and while I was there I got offered a credit card. 
 ## 解題思路
 
 我先在網路查 China T-Union 的信用卡，找到如圖的卡號
+
 ![alt text](image.png)
 
 接著輸進去，發現他說這不是一張有效的卡，查了一下原來是 checksum 錯了，原本的 `3104900011000335379` 總和為 52，不是十的倍數所以會無效
