@@ -1,12 +1,8 @@
-# SROP Detector Writeup
+# SROP Detector
 
 ## Description
-```text
-My friend Cebolinha send me this file called SROP detector. He always mispronounce "l" as "r" so I think this probably detects AI stuff
-```
 
-[slop_detector](https://dalctf2026.com/files/94641ea58d92a36f8deef0b1b24fe672/slop_detector?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzE4fQ.aiby3Q.cbMjdGSgktZ9jZXS3ZhfBpiFoyE)
-[Dockerfile](https://dalctf2026.com/files/8b8a3d5c1d22215e7ee54249b28defbb/Dockerfile?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzQ0fQ.aiby3Q.NJlao4eU4n9LdWB7BpPEHcTGFKA)
+My friend Cebolinha send me this file called SROP detector. He always mispronounce "l" as "r" so I think this probably detects AI stuff
 
 ## Solution Walkthrough
 

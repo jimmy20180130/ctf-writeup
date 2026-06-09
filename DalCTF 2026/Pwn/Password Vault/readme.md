@@ -1,12 +1,8 @@
-# Password Vault Writeup
+# Password Vault
 
 ## Description
-```text
-High level password manager. No way you can get my master key
-```
 
-[vault](https://dalctf2026.com/files/3a5b1b45828f85f1b981c01d2a29ff60/vault?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzI0fQ.aiaygg.mNIXLV3d8C0dhu7N4p_gE65Us4A)
-[manager.c](https://dalctf2026.com/files/c5f68215c03cd2adef2133dceaad943d/manager.c?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzI1fQ.aiaygg.4teTDd9D1lXtElcASQGhFqHqNEM)
+High level password manager. No way you can get my master key
 
 ## Solution Walkthrough
 

@@ -1,12 +1,8 @@
-# Slot Machine Writeup
+# Slot Machine
 
 ## 題目描述
-```text
-Yay Dal just installed a slot machine for all students! Maybe I can pay my tuition if I hit big!
-```
 
-[slot_machine.c](https://dalctf2026.com/files/c72a8e94ce7a8de694565a0c29c4baa0/slot_machine.c?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzI4fQ.aiaJ_g.bxuvpr9ZoWsjmzNmuUa-89-1uzU)
-[slot_machine](https://dalctf2026.com/files/4ac9c3a6bb99c162280193a579e97598/slot_machine?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzQyfQ.aiaJ_g.DN-55O_nTaqjYEfEmi4i9YcTbko)
+Yay Dal just installed a slot machine for all students! Maybe I can pay my tuition if I hit big!
 
 ## 解題思路
 
@@ -40,7 +36,6 @@ Yay Dal just installed a slot machine for all students! Maybe I can pay my tuiti
     do { c = rand() % NUM_SYMS; } while (c == a || c == b);
     ```
 
-
 2. **第二步**：
 
     因為沒有限制輸入的長度，而且cmd只有32bytes，所以可以利用ret2win：
@@ -68,7 +63,6 @@ Yay Dal just installed a slot machine for all students! Maybe I can pay my tuiti
 
     40個A負責填滿cmd和saved rbp，ret負責對齊stack，然後跳到jackpot，拿到flag後退出。
 
-    
 ## Flag
 
 ```text

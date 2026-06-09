@@ -1,12 +1,8 @@
-# Slot Machine Writeup
+# Slot Machine
 
 ## Description
-```text
-Yay Dal just installed a slot machine for all students! Maybe I can pay my tuition if I hit big!
-```
 
-[slot_machine.c](https://dalctf2026.com/files/c72a8e94ce7a8de694565a0c29c4baa0/slot_machine.c?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzI4fQ.aiaJ_g.bxuvpr9ZoWsjmzNmuUa-89-1uzU)
-[slot_machine](https://dalctf2026.com/files/4ac9c3a6bb99c162280193a579e97598/slot_machine?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzQyfQ.aiaJ_g.DN-55O_nTaqjYEfEmi4i9YcTbko)
+Yay Dal just installed a slot machine for all students! Maybe I can pay my tuition if I hit big!
 
 ## Solution Walkthrough
 
@@ -39,7 +35,6 @@ Yay Dal just installed a slot machine for all students! Maybe I can pay my tuiti
     int c;
     do { c = rand() % NUM_SYMS; } while (c == a || c == b);
     ```
-
 
 2. **Step 2**：
 
