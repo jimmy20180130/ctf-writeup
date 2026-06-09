@@ -1,31 +1,30 @@
-# Playing with Pointers Writeup
+# Playing with Pointers
 
 ## 題目描述
-```text
-I watched a youtube video earlier showing off this funny trick you can do with pointers. I forget what it's called though. Maybe I'll go play some Quake to think about it.
-```
 
-[Playingwithpointers.c](https://dalctf2026.com/files/63ce94de675b79c478e65ec66e4790be/Playingwithpointers.c?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzAxfQ.aiYyqg.bX98rIfOjNIfU2sO-GUQ8oxJpU4)
-[output.txt](https://dalctf2026.com/files/26c8028d10b7d3398f0c8d20387bf70e/output.txt?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzQxfQ.aiYyqg.dYWG1DtYHpqSUkRx7RWytrK43m0)
+I watched a youtube video earlier showing off this funny trick you can do with pointers. I forget what it's called though. Maybe I'll go play some Quake to think about it.
 
 ## 解題思路
 
 1. **第一步**：
 
     題目給的程式還缺了一些：
+
     ```c
     for(int i=0;i<x;i++){
-    fflag[i] = (float) FLAG[i];
-    fflag[i] = fflag[i] * fflag[i];
-    // man I forgot what line needs to go here... Maybe I should play some quake to think about it
+        fflag[i] = (float) FLAG[i];
+        fflag[i] = fflag[i] * fflag[i];
+        // man I forgot what line needs to go here... Maybe I should play some quake to think about it
     }
     ```
+
     藉由quake的提示，很明顯是少了Fast inverse square root的magic number，所以我把缺少的程式碼補上。~~也補上了wtf?~~
+
     ```c
     for(int i=0;i<x;i++){
-	fflag[i] = (float) FLAG[i];
-	fflag[i] = fflag[i] * fflag[i];
-	lflag[i] = 0x5f3759df - ((*(long *)&fflag[i]) >> 1); // what the fuck?
+        fflag[i] = (float) FLAG[i];
+        fflag[i] = fflag[i] * fflag[i];
+        lflag[i] = 0x5f3759df - ((*(long *)&fflag[i]) >> 1); // what the fuck?
     }
     ```
 

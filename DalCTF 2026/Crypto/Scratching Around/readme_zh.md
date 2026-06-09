@@ -1,4 +1,4 @@
-# Scratching Around Writeup
+# Scratching Around
 
 ## 題目描述
 

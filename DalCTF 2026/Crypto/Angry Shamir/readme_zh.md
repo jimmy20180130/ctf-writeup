@@ -1,4 +1,4 @@
-# Angry Shamir Writeup
+# Angry Shamir
 
 ## 題目描述
 

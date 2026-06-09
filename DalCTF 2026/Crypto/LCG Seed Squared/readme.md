@@ -1,4 +1,4 @@
-# LCG Seed Squared Writeup
+# LCG Seed Squared
 
 ## Description
 

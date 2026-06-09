@@ -1,4 +1,4 @@
-# Angry Shamir Writeup
+# Angry Shamir
 
 ## Description
 
