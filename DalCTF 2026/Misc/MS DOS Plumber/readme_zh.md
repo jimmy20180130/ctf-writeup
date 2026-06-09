@@ -1,4 +1,4 @@
-# MS DOS Plumber Writeup
+# MS DOS Plumber
 
 ## 題目描述
 
