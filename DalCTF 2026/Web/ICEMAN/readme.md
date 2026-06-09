@@ -1,14 +1,14 @@
 # ICEMAN
 
-## 題目描述
+## Description
 
 Drake's label OVO is days away from dropping ICEMAN — his most guarded project yet. They run a private API for members on the early-access list. You managed to snag a fan account. The vault is locked down tight... or is it?
 
-## 解題思路
+## Solution Walkthrough
 
-進到網站後會到 /graphql，前端提供一個 GraphQL console，並且可以在上方填入 JWT。
+Upon entering the website, you are directed to `/graphql`. The frontend provides a GraphQL console where you can input a JWT at the top.
 
-一開始先對 GraphQL 做 introspection，發現 schema 中有 Query 與 Mutation，其中 Mutation 提供了 register(username, password) 和 login(username, password)，兩者都會回傳 AuthPayload，而 AuthPayload 內含 token 欄位，因此可以先註冊一個 fan 帳號取得 JWT。
+Initially, performing an introspection on GraphQL reveals that the schema contains `Query` and `Mutation`. Among them, `Mutation` provides `register(username, password)` and `login(username, password)`, both of which return an `AuthPayload`. Since the `AuthPayload` includes a `token` field, we can first register a fan account to obtain a JWT.
 
 ```text
 {
@@ -100,7 +100,7 @@ Drake's label OVO is days away from dropping ICEMAN — his most guarded project
 }
 ```
 
-所以可以透過 register 來註冊
+Therefore, we can use `register` to create an account:
 
 ```text
 mutation {
@@ -110,7 +110,7 @@ mutation {
 }
 ```
 
-註冊後取得的 JWT payload 如下
+The JWT token obtained after registration is as follows:
 
 ```json
 {
@@ -122,6 +122,8 @@ mutation {
 }
 ```
 
+The decoded JWT payload looks like this:
+
 ```json
 {
   "username": "aaa",
@@ -129,11 +131,11 @@ mutation {
 }
 ```
 
-用這個 token 查詢 me 或 label 時，伺服器會回 `OVO membership required. Fan accounts do not have vault access`，代表權限不足
+When using this token to query `me` or `label`, the server responds with `OVO membership required. Fan accounts do not have vault access`, indicating insufficient privileges.
 
-小通靈一下發現 tier 要改為 ovo，所以拿 jwt 去用 john 破解了一下發現 secret 是 iceman。
+With a little bit of intuition, it becomes clear that the `tier` needs to be changed to `ovo`. After cracking the JWT using John the Ripper, the secret is found to be `iceman`.
 
-好了以後 me 就可以正常查詢
+Once that is done, the `me` query works normally:
 
 ```text
 {
@@ -155,7 +157,7 @@ mutation {
 }
 ```
 
-之後就可以查 unreleased albums 了
+Afterward, we can query the unreleased albums:
 
 ```text
 {
