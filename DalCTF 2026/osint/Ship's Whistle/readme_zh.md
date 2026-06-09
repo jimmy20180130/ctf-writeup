@@ -1,11 +1,8 @@
-# Ship's Whistle Writeup
+# Ship's Whistle
 
 ## 題目描述
-```text
-What coordinates was this photo taken at? Flag format is dalctf{\d+.\d{2}_\d+.\d{2}} (i.e., decimal coordinates to 2 decimal places. if the answer is negative coordinates then you need to include the negative '-' symbol).
-```
 
-[boat.png](https://dalctf2026.com/files/8a3f1719a11f3cdd728090ac0ad9d7ee/boat.png?token=eyJ1c2VyX2lkIjozMjcsInRlYW1faWQiOjE4MywiZmlsZV9pZCI6NzE1fQ.aiZCvQ.bHiDbywJsanrDLZmCUxiHjd5yfA)
+What coordinates was this photo taken at? Flag format is dalctf{\d+.\d{2}_\d+.\d{2}} (i.e., decimal coordinates to 2 decimal places. if the answer is negative coordinates then you need to include the negative '-' symbol).
 
 ## 解題思路
 
@@ -38,7 +35,7 @@ What coordinates was this photo taken at? Flag format is dalctf{\d+.\d{2}_\d+.\d
     運氣很好，衛星有拍到船的痕跡，標在船的附近就能拿到flag。
 
     ![alt text](pictures/image-3.png)
-    
+
 ## Flag
 
 ```text
