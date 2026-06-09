@@ -5,12 +5,12 @@ let seed = 0;
 let cookie = "";
 
 function nextValue() {
-    let t = 63 & seed >> 4; // 取 seed 的第 4~9 bit，共 6 bits
-    let e = t & 15; // 結果會是 0~15
-    if (e > 9) e = 16 - e // 把 10~15 變回 6~1
-    seed = (seed * 1664525 + 1013904223) & 0x7fffffff; // 更新 seed
+    let t = 63 & seed >> 4; // 取 seed 的第 4~9 bit，共 6 bits / get bits 4~9 of seed, total 6 bits
+    let e = t & 15; // 結果會是 0~15 / result will be 0~15
+    if (e > 9) e = 16 - e // 把 10~15 變回 6~1 / convert 10~15 back to 6~1
+    seed = (seed * 1664525 + 1013904223) & 0x7fffffff; // 更新 seed / update seed
 
-    return e + 1; // 最後結果是 1~10
+    return e + 1; // 最後結果是 1~10 / final result is 1~10
 }
 
 async function request(path, options = {}) {
