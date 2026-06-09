@@ -1,12 +1,12 @@
 # Haskell2
 
-## 題目描述
+## Description
 
 My friend's gave me a compiler for the unreleased haskell2. Apparently its easy and cool now! But I did not pay attention in my functional programming class and cannot code in it! Write a program to extract the flag. To have the checker run it, pass the program as base64.
 
-## 解題過程
+## Solution Walkthrough
 
-先觀察題目給的 compiler，可以看到它會接受 `.hs2` 原始碼檔案，接著用 `strings` 查看 binary 裡面的字串，可以找到一些關鍵語法提示：
+First, observing the provided compiler, we can see that it accepts `.hs2` source code files. Next, checking the strings inside the binary using `strings` reveals some key syntax hints:
 
 ```text
 semantic error at line %d: function arguments must be remembered variables
@@ -44,21 +44,21 @@ each
 tell
 ```
 
-從這些訊息可以推測語法大概是：
+From these error messages, we can infer that the syntax roughly looks like this:
 
 ```text
-innocuous <變數> <- read file "<檔名>"
-for each <變數> in <檔案變數> tell me <變數>
+innocuous <variable> <- read file "<filename>"
+for each <variable> in <file_variable> tell me <variable>
 ```
 
-所以我們可以使用以下的 payload 來得到 flag
+Therefore, we can use the following payload to retrieve the flag:
 
 ```text
 innocuous f <- read file "flag.txt"
 for each line in f tell me line
 ```
 
-題目說要把 payload 轉成 base64，於是輸入 `aW5ub2N1b3VzIGYgPC0gcmVhZCBmaWxlICJmbGFnLnR4dCIKZm9yIGVhY2ggbGluZSBpbiBmIHRlbGwgbWUgbGluZQo=` 即可
+The challenge states that the payload needs to be converted to Base64, so submitting `aW5ub2N1b3VzIGYgPC0gcmVhZCBmaWxlICJmbGFnLnR4dCIKZm9yIGVhY2ggbGluZSBpbiBmIHRlbGwgbWUgbGluZQo=` will do the trick.
 
 ## Flag
 

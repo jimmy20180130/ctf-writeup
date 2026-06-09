@@ -1,13 +1,12 @@
 # Bit Miner
 
-## 題目描述
+## Description
 
 Mine, upgrade, and mine some more! Think outside the box and buy the flag in the shop. (Note: when making an account, make sure other users can't guess your password and use your bits!)
 
-## 解題思路
+## Solution Walkthrough
 
-觀察 main.c 可以發現在扣款的時候邏輯出了一些問題，檢查餘額用的是舊的 bits，但確認購買以後又會重新讀取一次帳號資料，此外可以發現 bits 是
- unsigned long，代表可以被扣到負數導致 overflow
+By observing `main.c`, we can see that there is a logical flaw in the deduction mechanism. The balance check uses the old `bits` value, but after confirming the purchase, the account data is reloaded. Furthermore, `bits` is an `unsigned long`, which means it can be deducted into a negative value, resulting in an underflow.
 
 ```c
 void buy(int item, int level, unsigned long price, unsigned long bits) {
@@ -52,9 +51,11 @@ void buy(int item, int level, unsigned long price, unsigned long bits) {
 }
 ```
 
-由上述結果可以得知這是一個 TOCTOU 問題，解法是先挖礦挖到帳號有 10 bits，用同個帳號開兩個連線同時買 upgrade，第一個帳號會成功購買，並且被扣十塊錢，餘額為 0，但是第二個連線讀取到的餘額為 0，再扣十塊就會變成 -10 元，然而因為 bits 是 unsigned long，所以 0 - 10 會發生 unsigned integer underflow
+From the above results, we can infer that this is a TOCTOU (Time-of-Check to Time-of-Use) vulnerability. The solution is to mine until the account has 10 bits, then open two concurrent connections using the same account to purchase an upgrade simultaneously.
 
-在 64-bit 環境下，結果會變成 2^64 - 10 = 18446744073709551606，這個數值遠大於 flag 的價格，因此可以直接購買 flag。
+The first connection will successfully make the purchase, deducting 10 bits and leaving the balance at 0. However, the second connection then reads the balance as 0, and deducting another 10 bits makes it -10. Since `bits` is an `unsigned long`, subtracting 10 from 0 causes an unsigned integer underflow.
+
+In a 64-bit environment, the result will become 2^64 - 10 = 18446744073709551606. This value is far greater than the price of the flag, allowing us to purchase the flag directly.
 
 ## Flag
 
