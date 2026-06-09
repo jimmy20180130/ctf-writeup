@@ -68,8 +68,6 @@ Yay Dal just installed a slot machine for all students! Maybe I can pay my tuiti
 
     The 40 A's are used to fill cmd and saved rbp. The ret gadget is used to align the stack, then execution jumps to jackpot. After getting the flag, the program exits.
 
-    P.S. ret was found using `find_ret.py`
-
 ## Flag
 
 ```text

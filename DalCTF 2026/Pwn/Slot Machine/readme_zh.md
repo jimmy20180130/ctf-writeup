@@ -68,7 +68,6 @@ Yay Dal just installed a slot machine for all students! Maybe I can pay my tuiti
 
     40個A負責填滿cmd和saved rbp，ret負責對齊stack，然後跳到jackpot，拿到flag後退出。
 
-    P.S. ret是用`find_ret.py`找到的
     
 ## Flag
 
