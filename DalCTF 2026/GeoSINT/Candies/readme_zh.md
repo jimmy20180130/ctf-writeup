@@ -1,9 +1,9 @@
-# Candies Writeup
+# Candies
 
 ## 題目描述
-```text
+
 Take me to the candy shop
-```
+
 https://geosint.dalctf2026.com/
 
 ## 解題思路
@@ -21,7 +21,7 @@ https://geosint.dalctf2026.com/
 ## Google Map Location
 
 https://maps.app.goo.gl/j1bTADRureNPEEQN7
-    
+
 ## Flag
 
 ```text

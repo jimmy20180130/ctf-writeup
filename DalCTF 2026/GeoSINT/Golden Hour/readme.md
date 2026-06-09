@@ -1,9 +1,9 @@
-# Golden Hour Writeup
+# Golden Hour
 
 ## Description
-```text
+
 Would be nice to take a pic
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

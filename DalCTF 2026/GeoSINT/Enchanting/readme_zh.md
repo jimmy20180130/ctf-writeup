@@ -1,9 +1,9 @@
-# Enchanting Writeup
+# Enchanting
 
 ## 題目描述
-```text
+
 Ah, the country side
-```
+
 https://geosint.dalctf2026.com/
 
 ## 解題思路
@@ -25,7 +25,7 @@ https://geosint.dalctf2026.com/
 ## Google Map Location
 
 https://maps.app.goo.gl/wn9Y1pRckZECoZubA
-    
+
 ## Flag
 
 ```text

@@ -1,9 +1,9 @@
-# Candies Writeup
+# Candies
 
 ## Description
-```text
+
 Take me to the candy shop
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

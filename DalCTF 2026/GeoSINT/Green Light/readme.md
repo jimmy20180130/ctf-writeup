@@ -1,9 +1,9 @@
-# Green Light Writeup
+# Green Light
 
 ## Description
-```text
+
 Better hurry up
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

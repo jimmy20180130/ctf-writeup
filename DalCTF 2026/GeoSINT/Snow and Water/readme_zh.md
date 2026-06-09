@@ -1,9 +1,9 @@
-# Snow and Water Writeup
+# Snow and Water
 
 ## 題目描述
-```text
+
 Dream vacation fr
-```
+
 https://geosint.dalctf2026.com/
 
 ## 解題思路
@@ -27,7 +27,7 @@ https://geosint.dalctf2026.com/
 ## Google Map Location
 
 https://maps.app.goo.gl/tmvKUku9UhKB2Yvu5
-    
+
 ## Flag
 
 ```text

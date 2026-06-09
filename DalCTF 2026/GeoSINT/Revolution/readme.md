@@ -1,9 +1,9 @@
-# Revolution Writeup
+# Revolution
 
 ## Description
-```text
+
 So much space to explore!
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

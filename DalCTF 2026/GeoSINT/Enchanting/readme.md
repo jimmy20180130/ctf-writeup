@@ -1,9 +1,9 @@
-# Enchanting Writeup
+# Enchanting
 
 ## Description
-```text
+
 Ah, the country side
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

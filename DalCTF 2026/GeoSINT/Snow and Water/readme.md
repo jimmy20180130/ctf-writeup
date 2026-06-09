@@ -1,9 +1,9 @@
-# Snow and Water Writeup
+# Snow and Water
 
 ## Description
-```text
+
 Dream vacation fr
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

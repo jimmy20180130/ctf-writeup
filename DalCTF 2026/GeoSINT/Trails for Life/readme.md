@@ -1,9 +1,9 @@
-# Trails for Life Writeup
+# Trails for Life
 
 ## Description
-```text
+
 I would get lost even on a strait trail
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough

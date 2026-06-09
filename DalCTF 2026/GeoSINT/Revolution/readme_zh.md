@@ -1,9 +1,9 @@
-# Revolution Writeup
+# Revolution
 
 ## 題目描述
-```text
+
 So much space to explore!
-```
+
 https://geosint.dalctf2026.com/
 
 ## 解題思路
@@ -13,9 +13,9 @@ https://geosint.dalctf2026.com/
     我用Google以圖搜圖：
 
     ![alt text](image.png)
-    
+
     找到了：
-    
+
     https://sainthelenaisland.info/historicbuildingsj.htm
 
     然後就在Google找Jamestown Gate，就可以找到確切位置了。
@@ -23,7 +23,7 @@ https://geosint.dalctf2026.com/
 ## Google Map Location
 
 https://maps.app.goo.gl/wRTiwqGRwsZJLDcQ9
-    
+
 ## Flag
 
 ```text

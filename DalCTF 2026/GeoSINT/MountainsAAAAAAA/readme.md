@@ -1,9 +1,9 @@
-# MountainsAAAAAAA Writeup
+# MountainsAAAAAAA
 
 ## Description
-```text
+
 Welcome to Mars!
-```
+
 https://geosint.dalctf2026.com/
 
 ## Solution Walkthrough
@@ -23,7 +23,7 @@ https://geosint.dalctf2026.com/
     ![alt text](<image1.png>)
 
     I found that this was Moon Valley in Chile.
-    
+
     Then, based on the clue from the challenge, I determined that this was a continuous curve, which allowed me to find the exact location.
 
 ## Google Map Location

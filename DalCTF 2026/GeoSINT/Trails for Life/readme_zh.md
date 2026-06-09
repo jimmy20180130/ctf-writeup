@@ -1,9 +1,9 @@
-# Trails for Life Writeup
+# Trails for Life
 
 ## 題目描述
-```text
+
 I would get lost even on a strait trail
-```
+
 https://geosint.dalctf2026.com/
 
 ## 解題思路
@@ -27,7 +27,7 @@ https://geosint.dalctf2026.com/
 ## Google Map Location
 
 https://maps.app.goo.gl/GkPEM35t3XMsHDrt8
-    
+
 ## Flag
 
 ```text
