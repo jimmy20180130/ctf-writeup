@@ -1,14 +1,14 @@
 # Cracking the Vault
 
-## 題目描述
+## Description
 
 Apparently this banking system is super secure and would never store the password somewhere in plain sight...
 
 https://qphi2o7slkwc.boroctf.com/
 
-## 解題思路
+## Solution Walkthrough
 
-打開 developer tools 即可看到 flag
+you can see the flag by open developer tools
 
 ![alt text](image.png)
 

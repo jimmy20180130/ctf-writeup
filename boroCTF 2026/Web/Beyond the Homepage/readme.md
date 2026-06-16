@@ -1,14 +1,14 @@
 # Beyond the Homepage
 
-## 題目描述
+## Description
 
 There's more to what you see...
 
 https://6ox3t3alzl51.boroctf.com/
 
-## 解題思路
+## Solution Walkthrough
 
-打開 developer tools 即可看到 flag
+you can see the flag by open developer tools
 
 ![alt text](image.png)
 
