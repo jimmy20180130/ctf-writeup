@@ -1,0 +1,7 @@
+<svg width="1800" height="1200"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image x="0" y="0" width="1800" height="1200"
+         href="caption:@/flag.txt"
+         xlink:href="caption:@/flag.txt"/>
+</svg>
