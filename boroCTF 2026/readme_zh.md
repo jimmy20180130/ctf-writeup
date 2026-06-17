@@ -7,7 +7,7 @@ Team Members:
 
 - [@jimmy20180130](https://github.com/jimmy20180130) - 14700 points
 
-Rank: 41 / 327
+Rank: 38 / 327
 
 ## 注意事項
 
