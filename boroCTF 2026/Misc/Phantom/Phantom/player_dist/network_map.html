@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apex Energy - Topology</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background-color: #ffffff; }
+        .container { max-width: 800px; margin: auto; border: 1px solid #ccc; padding: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #0056b3; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #666; text-align: center; font-style: italic; }
+        .author { margin-top: 5px; font-size: 0.7em; color: #999; text-align: right; }
+    </style>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Apex Energy - Logical Network Topology</h2>
+        <div class="mermaid">
+            graph TD
+                Internet((Internet)) --> Edge[Edge Router]
+                Edge --> DMZ_Switch[DMZ Switch]
+                DMZ_Switch --> WebServer[Public Web Server]
+                DMZ_Switch --> Core[Core Routing Stack]
+                Core == Direct 10G Fiber Link === Internal_Switch[Internal Switch]
+                Internal_Switch --> DB[(Database Server<br>10.0.50.100)]
+                Internal_Switch --> AD[Active Directory]
+                
+                style DB fill:#f9dbdb,stroke:#c00,stroke-width:2px
+                style Core fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+                style Internal_Switch fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+        </div>
+        <div class="footer">
+            CONFIDENTIAL - Internal Use Only. Diagram reflects current state routing as of Q1.
+        </div>
+        <div class="author">
+            Drafted by: J. Holden (Senior Network Engineer, Apex Renewable Energy)
+        </div>
+    </div>
+</body>
+</html>
