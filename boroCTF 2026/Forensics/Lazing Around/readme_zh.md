@@ -6,7 +6,7 @@ Get back to work!
 
 ## 解題思路
 
-從題目下載下來的 chal 用 file 查看以後發現是一個 ext4 filesystem data，，接著 mount 以後可以看到裡面有 `entry_log` 以及 `exit_log` 等 txt file，裡面均沒有 flag (其中 mnt.zip 是我把這些 log 全部包成一個 zip 檔案)
+從題目下載下來的 chal 用 file 查看以後發現是一個 `ext4 filesystem data`，接著 mount 以後可以看到裡面有 `entry_log` 以及 `exit_log` 等 txt file，裡面均沒有 flag (其中 mnt.zip 是我把這些 log 全部包成一個 zip 檔案)
 
 我們知道 ext4 的 block size 通常是 4096 bytes，而查看了每個 log，他們的大小都小於一個 block，而 ext4 會以 block 為單位分配空間，因此 EOF 到該 block 結尾之間可能存在 file slack
 

@@ -1,12 +1,12 @@
 # File-et Mignon
 
-## 題目描述
+## Description
 
 Don't try to bite off more than you can chew.
 
-## 解題思路
+## Solution Walkthrough
 
-用 `strings` 即可得到 flag
+Using `strings` will reveal the flag.
 
 ```text
 ┌──(kali㉿kali)-[~/Desktop]
