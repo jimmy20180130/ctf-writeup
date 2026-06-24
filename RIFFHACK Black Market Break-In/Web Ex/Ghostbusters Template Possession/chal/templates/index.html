@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <section>
+    <h1>Oscillation Translator</h1>
+    <p>
+      Compose a chant to translate raw P.K.E. telemetry into something the team can read.
+      The console only strips ritual control blocks, so try to keep your output calm.
+    </p>
+  </section>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    <label for="chant">Chant input</label>
+    <textarea
+      id="chant"
+      name="chant"
+      rows="6"
+      style="width: 100%; margin-bottom: 1rem;"
+    >{{ last_input or default }}</textarea>
+    <button type="submit">Render chant</button>
+  </form>
+
+  {% if rendered %}
+    <section>
+      <h2>Chant output</h2>
+      <div
+        style="
+          background: #0b1a2b;
+          border: 1px solid #2f9e44;
+          padding: 1rem;
+          white-space: pre-wrap;
+        "
+      >
+        {{ rendered|safe }}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ghostbusters Template Possession</title>
+    <style>
+      body {
+        font-family: "Share Tech Mono", monospace;
+        background: #0c0f16;
+        color: #e5f4ff;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header,
+      footer {
+        background: #182032;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+      }
+      main {
+        flex: 1;
+        padding: 2rem;
+      }
+      a {
+        color: #9bf6ff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>Ecto-Containment Console v3</strong>
+    </header>
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+    <footer>
+      Property of Spengler Labs — unauthorized rituals prohibited.
+    </footer>
+  </body>
+</html>

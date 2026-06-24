@@ -1,0 +1,14 @@
+{
+  "name": "Ghostbusters Template Possession",
+  "description": "Spengler's Oscillation Translator is warping the containment HUD in impossible ways. The console still seems eager to reveal what the filters were meant to hide.",
+  "category": "Web Exploitation",
+  "difficulty": "Medium",
+  "form": "flag",
+  "points": 50,
+  "hint": "Maybe the console's braces do more than decorate the chant. Try subtle calculations and watch what renders.",
+  "assistant_practice_notes": "Figure out where your input is being rendered before you try payloads. The useful move is to prove whether the server is evaluating template syntax or merely echoing text, starting with the smallest harmless expression you can observe clearly.",
+  "answer": "bitctf{{gh057ly_j1nj4_p0ss35510n}}",
+  "country_code": "US",
+  "challenge_type": "SERVICE-BASED",
+  "supports_team_specific_flags": true
+}

@@ -1,0 +1,12 @@
+# Required files for Ghostbusters Template Possession
+# (Generated from Dockerfile COPY/ADD — do not edit by hand if you want to keep in sync)
+
+Dockerfile
+README.md
+app.py
+challenge.json
+exploit.py
+required_files.txt
+requirements.txt
+templates/index.html
+templates/layout.html
