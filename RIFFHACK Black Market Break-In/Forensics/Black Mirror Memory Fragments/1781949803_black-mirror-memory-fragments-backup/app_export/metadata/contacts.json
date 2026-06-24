@@ -1,0 +1,33 @@
+{
+  "device": {
+    "owner_account": "jaden.cole@smithereen.app",
+    "backup_taken": "2024-11-03T02:14:07Z",
+    "integrity": "PARTIAL - row table fragmented, cache names reissued during recovery"
+  },
+  "threads": [
+    {
+      "thread_id": "t_river",
+      "display": "river.k",
+      "source_bucket": "primary_inbox",
+      "handshake_state": "signed",
+      "trust_score": 88,
+      "note": "Primary inbox thread with recovered rows spanning freelist and WAL output."
+    },
+    {
+      "thread_id": "t_mara",
+      "display": "mara.vey",
+      "source_bucket": "primary_inbox",
+      "handshake_state": "signed",
+      "trust_score": 84,
+      "note": "Primary inbox thread with mixed live and recovered rows; attachments survived relinking."
+    },
+    {
+      "thread_id": "t_echo",
+      "display": "echo.support",
+      "source_bucket": "quarantine_restore",
+      "handshake_state": "unsigned",
+      "trust_score": 14,
+      "note": "Restored from quarantine and should be treated as untrusted."
+    }
+  ]
+}

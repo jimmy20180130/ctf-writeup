@@ -1,0 +1,67 @@
+{
+  "export_version": "smithereen-recovery-3.2",
+  "note": "chunk order follows chunk_files array; recovered media may share the same camera header, so thread context matters as much as file type",
+  "attachments": [
+    {
+      "attachment_id": "att_river_final",
+      "thread_id": "t_river",
+      "chunk_files": [
+        "ch_5a.dat",
+        "ch_2c.dat",
+        "ch_9f.dat"
+      ],
+      "sha1": "86c962644e41c56e9a1ebb2b287d8242c2273c14",
+      "kind": "draft_note"
+    },
+    {
+      "attachment_id": "att_river_photo",
+      "thread_id": "t_river",
+      "chunk_files": [
+        "ch_x7.dat",
+        "ch_y4.dat"
+      ],
+      "sha1": "ee224b600d2a34c19d812261ae05ddf451dad7cf",
+      "kind": "porch_still"
+    },
+    {
+      "attachment_id": "att_river_route",
+      "thread_id": "t_river",
+      "chunk_files": [
+        "ch_r1.dat",
+        "ch_r2.dat"
+      ],
+      "sha1": "1703ed0c8e928f97b3699af32c65b3d7389da859",
+      "kind": "route_snapshot"
+    },
+    {
+      "attachment_id": "att_echo_lure",
+      "thread_id": "t_echo",
+      "chunk_files": [
+        "ch_e1.dat",
+        "ch_e2.dat"
+      ],
+      "sha1": "554edb29ce890edba3a95839428bde527e858565",
+      "kind": "quarantine_banner"
+    },
+    {
+      "attachment_id": "att_mara_receipt",
+      "thread_id": "t_mara",
+      "chunk_files": [
+        "ch_m1.dat",
+        "ch_m2.dat"
+      ],
+      "sha1": "9f10d902ba754a1ba7c1f3c718829dfefda4a226",
+      "kind": "receipt_scan"
+    },
+    {
+      "attachment_id": "att_mara_stub",
+      "thread_id": "t_mara",
+      "chunk_files": [
+        "ch_s1.dat",
+        "ch_s2.dat"
+      ],
+      "sha1": "9efe402e77c448b6b786281d8caad6fe0bb03268",
+      "kind": "parking_stub"
+    }
+  ]
+}

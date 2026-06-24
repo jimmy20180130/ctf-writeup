@@ -1,0 +1,32 @@
+MEMORY CAPTURE: Lumon MDR workstation triage
+ACQ TOOL: winpmem 4.2.0 | PROFILE: Win10x64_19045
+NOTE: kernel callback inconsistency observed in userland telemetry stream
+
+[pslist]
+pid=0360 name=smss.exe ppid=0004 session=0
+pid=0740 name=csrss.exe ppid=0676 session=0
+pid=1448 name=explorer.exe ppid=4172 session=1
+pid=3312 name=msedge.exe ppid=1448 session=1
+pid=7421 name=ot_kernel_helper.exe ppid=3312 session=1 (unsigned module mapped)
+
+[triage note]
+residue survived in clipboard cache, relay handoff, and route mask buffers
+the handoff key still reflects mutex before wellness
+
+[clipboard cache]
+MDR_REC_A::T6ucYf2aZ4VlxcLDROZCxEa7QzrlwjhGYeVmHR/9eDF906DzUJAh0pLR81CT0SOTId6SYZM1Ujx8ZHxktuWOvv5yzh6+Er7Gcp5erk6ecneOxSuXcwFngllVab1ZeVVpPue3VZJtN3bRFM4=
+
+[relay handoff]
+MDR_REC_B::74fe70772ea8ac1fe4150f1bbb65ec29c5da9438bd670c8bc351695209152d8fc77c415ffc1a3a5f605db8c4
+
+[route mask]
+MDR_REC_C::ycPpCTiLimLndIK7wt3mhLFH0CSDx/Q=
+
+[malfind:7421]
+region=0x000001f522a10000 protection=PAGE_EXECUTE_READWRITE
+ascii=PowerShell fallback disabled; persistence primed via HKCU\Software\Lumon\Overtime
+ascii=helper queue pinned to macrodata relay with stale clipboard residue nearby
+
+[netscan excerpt]
+tcp 10.13.37.44:49777 -> 198.51.100.77:443 ESTABLISHED pid=7421
+ja3=72a589da586844d7f0818ce684948eea
