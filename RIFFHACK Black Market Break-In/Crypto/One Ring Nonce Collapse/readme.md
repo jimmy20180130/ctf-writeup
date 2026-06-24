@@ -1,0 +1,94 @@
+# One Ring Nonce Collapse
+
+## Description
+
+The archives of Minas Tirith expose a ceremonial signing oracle for royal decrees. Its curve magic looks impressive, but the shimmer on each parchment feels far too familiar.
+
+## Solution Walkthrough
+
+1. **Step 1**:
+
+    This challenge involves Biased-nonce ECDSA (secp256k1).
+
+    `/sign` returns `nonce_msb`, which effectively leaks the high bits of the nonce used for each signature, leaving only the lower 20 bits unknown.
+
+    With just two sets of signatures, we can eliminate the private key, leaving a linear congruence with two unknown 20-bit values:
+
+    ```text
+    a × e1 - b × e2 ≡ C mod n
+    ```
+
+    Since the possibilities for the lower 20 bits are only 2^20, we can solve this by brute force.
+
+    For every guess of `e1`, `e2` is calculated accordingly. If `e2` is also 20 bits, it indicates that the nonce suffix has been guessed correctly.
+
+    (If guessed incorrectly, `e2` will exceed 20 bits; although mathematically valid, it contradicts the condition of being only 20 bits.)
+
+2. **Step 2**:
+
+    After obtaining the nonce `k`, we can derive the private key and generate our own ECDSA signature.
+
+    Deriving the private key:
+
+    ```text
+    d = 49445691491809121661120197809562000013532140945666873723905183488841082395052
+    ```
+
+    Sign `one ring to rule them all` and POST it to `/verify`:
+
+    ```json
+    POST /verify
+    {
+      "r": 85332525459980658271144759904259062048678291958438163703086231758026550323875,
+      "s": 63809435703605078919967882182126795059121661249937590955507693194778843009020
+    }
+    ```
+
+    The script is in `solution.py`.
+
+## Oracle 回傳資料
+
+### `/pubkey`
+
+```json
+{
+  "curve": "secp256k1",
+  "gx": "55066263022277343669578718895168534326250603453777594175500187360389116729240",
+  "gy": "32670510020758816978083085130507043184471273380659243275938904335757337482424",
+  "n": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+  "protected_message": "one ring to rule them all",
+  "pub_x": "31075408999826857267622373589212020024719544603973655179256943732356976199204",
+  "pub_y": "95903745479717917561880478548129176548050831205073107571675088755035555146241",
+  "unknown_bits": 20
+}
+```
+
+### `/sign`（`message: test123`）
+
+```json
+{
+  "h": "107125873068076627457087917168470308992159544359252318215556110993730382558638",
+  "message": "test123",
+  "nonce_msb": "1345705611404482240910997051656082980580447527960032037647811243256875",
+  "r": "15482948726620294824785901737349121380884329415834039699617336203385060698878",
+  "s": "41581174235528323427257642410187520726774306953125111411937983658013715886832"
+}
+```
+
+### `/sign`（`message: test12`）
+
+```json
+{
+  "h": "76693128649361230887255815150935942254957981220639293541855317788799281990094",
+  "message": "test12",
+  "nonce_msb": "64530364736000551952059762696230574387642343636258856368109848182380901",
+  "r": "89983050630410276238361987121908177652883307648625520391588878921648694180365",
+  "s": "86608461229591304191071280427918977121530678458476952254116370523164382276263"
+}
+```
+
+## Flag
+
+```text
+bitctf{{0n3_r1ng_n0nc3_70_ru13_7h3_curv3}}
+```
