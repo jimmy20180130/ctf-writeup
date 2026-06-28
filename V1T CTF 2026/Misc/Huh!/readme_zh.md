@@ -24,6 +24,10 @@ I tried to make good misc by mixing stego and osint 2gether󠀁󠁑󠁵󠁡󠁣�
 
 接著點進去他[主頁的連結](https://pastebin.com/bCdN90ep)，進到 pastebin，再進去 [mega 連結](https://mega.nz/file/mxIwSDDa#_JTS1ENZPanU-fYsbo7ptzDaMtZuXR9peB6mLYSh23U)，可以看到一部 `Huh.wav`
 
+用 strings 去找 flag 或是 mega 或是 pastebin 連結都找不到，然後觀察 spectrogram 也沒看到有用的東西，就這樣搞了一個多小時
+
+之後就往 LSB steganography 的方向測試，又搞了幾個小時最後發現將 `data` chunk 中每個 byte 的最低位元取出，並以 MSB-first 每 8 bit 組成一個 byte，就能還原出一段 Mega 連結
+
 對他分析分析以後就可以得到另一個 [mega 連結](https://mega.nz/file/DohSlCpB#3CQyY1OUnmmAgCOKLKPesgsGX3Mr2-t_qG9H3J1OGuE)，可以看到 `4nh_d0_p1x1
 .txt`，這個檔名搞人用的，它由 0 和 1 組成，不難看出他是一個 QRcode
 
