@@ -33,6 +33,12 @@ I tried to make good misc by mixing stego and osint 2gether󠀁󠁑󠁵󠁡󠁣�
 
 掃進去以後可以看到最後一個 [mega 連結](https://mega.nz/file/upxyGCpa#xx5eEWZM92TEDuiyYqyYsoBnaosbwaNfKyyF7Grb9Eo)，可以看到 `QK1_8101.CR2`，直接用 strings 可以發現最後一段 flag `_c4non_f4nboy}`
 
+不過作者說 intended solution 是要用 exiftool 把 thumbnail 提取出來，指令如下 `exiftool -b -ThumbnailImage QK1_8101.CR2 > thumbnail.jpg`
+
+![alt text](image-5.png)
+
+![alt text](image-4.png)
+
 把兩段 flag 合在一起以後就是最終的 flag 了
 
 不得不說這題真的很糖，哪有人底線放兩個，智障嗎我試半天 `V1t{im_a_s0lid_4nh_d0_p1x1_c4non_f4nboy}` 結果都錯，出這題的人要不要自己去跳一跳算了

@@ -32,6 +32,12 @@ After analyzing that, I got another [Mega link](https://mega.nz/file/DohSlCpB#3C
 
 After scanning it, I found the final [Mega link](https://mega.nz/file/upxyGCpa#xx5eEWZM92TEDuiyYqyYsoBnaosbwaNfKyyF7Grb9Eo), which contained `QK1_8101.CR2`. Running `strings` on it directly reveals the last part of the flag: `_c4non_f4nboy}`
 
+However the author said that the intended solution is to use exiftool to extract the thumbnail. You can use `exiftool -b -ThumbnailImage QK1_8101.CR2 > thumbnail.jpg` to get the thumbnail.
+
+![alt text](image-5.png)
+
+![alt text](image-4.png)
+
 Putting the two parts of the flag together gives the final flag.
 
 I have to say, this challenge was really damn troll. Who the hell puts two underscores there? I spent forever trying `V1t{im_a_s0lid_4nh_d0_p1x1_c4non_f4nboy}` and it kept being wrong. Maybe whoever made this challenge should go make more challenges like this.
