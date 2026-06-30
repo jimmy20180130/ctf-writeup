@@ -1,0 +1,55 @@
+{
+    "classes": [
+        {
+            "name": "Switch",
+            "dialect": "CPP",
+            "parents": [],
+            "interfaces": [],
+            "final": false,
+            "methods": [
+                {
+                    "name": "pad",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "noop"
+                },
+                {
+                    "name": "open",
+                    "slot": 7,
+                    "visibility": "public",
+                    "body": "allow"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "id": 1,
+            "declared_class": "Switch",
+            "runtime_class": "Switch",
+            "fields": {
+                "__task__": "dispatch",
+                "slot": 7
+            },
+            "vtable": [
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.open",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad",
+                "Switch.pad"
+            ]
+        }
+    ],
+    "entry": 1
+}

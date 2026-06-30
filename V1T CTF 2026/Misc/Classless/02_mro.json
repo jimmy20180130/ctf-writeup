@@ -1,0 +1,66 @@
+{
+    "classes": [
+        {
+            "name": "Animal",
+            "dialect": "PY",
+            "parents": [],
+            "interfaces": [],
+            "final": false,
+            "methods": [
+                {
+                    "name": "speak",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "print_cat"
+                }
+            ]
+        },
+        {
+            "name": "Cat",
+            "dialect": "PY",
+            "parents": [
+                "Animal"
+            ],
+            "interfaces": [],
+            "final": false,
+            "methods": [
+                {
+                    "name": "speak",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "print_cat"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "id": 1,
+            "declared_class": "Animal",
+            "runtime_class": "Animal",
+            "fields": {
+                "__task__": "mro",
+                "__class__": "Cat"
+            },
+            "vtable": [
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak",
+                "Animal.speak"
+            ]
+        }
+    ],
+    "entry": 1
+}

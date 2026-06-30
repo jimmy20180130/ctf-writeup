@@ -1,0 +1,66 @@
+{
+    "classes": [
+        {
+            "name": "Greeter",
+            "dialect": "JAVA",
+            "parents": [],
+            "interfaces": [],
+            "final": false,
+            "methods": [
+                {
+                    "name": "greet",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "noop"
+                }
+            ]
+        },
+        {
+            "name": "Friendly",
+            "dialect": "JAVA",
+            "parents": [],
+            "interfaces": [
+                "Greeter"
+            ],
+            "final": false,
+            "methods": [
+                {
+                    "name": "greet",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "print_task"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "id": 1,
+            "declared_class": "Friendly",
+            "runtime_class": "Friendly",
+            "fields": {
+                "__task__": "interface",
+                "probe_interface": "Greeter"
+            },
+            "vtable": [
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet",
+                "Friendly.greet"
+            ]
+        }
+    ],
+    "entry": 1
+}

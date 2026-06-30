@@ -1,0 +1,48 @@
+{
+    "classes": [
+        {
+            "name": "Hello",
+            "dialect": "CPP",
+            "parents": [],
+            "interfaces": [],
+            "final": false,
+            "methods": [
+                {
+                    "name": "hello",
+                    "slot": 0,
+                    "visibility": "public",
+                    "body": "print_hello"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "id": 1,
+            "declared_class": "Hello",
+            "runtime_class": "Hello",
+            "fields": {
+                "__task__": "hello"
+            },
+            "vtable": [
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello",
+                "Hello.hello"
+            ]
+        }
+    ],
+    "entry": 1
+}
