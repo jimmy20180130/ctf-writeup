@@ -1,12 +1,12 @@
 # B1tsy Ducky
 
-## 題目描述
+## Description
 
 You need to enter your name then play to able to solve else it gonna error
 
 https://b1tsy.v1t.site/
 
-## 解題思路
+## Solution Walkthrough
 
 This is a small game. Basically, you need to find the item the duck wants, and then go back to the duck.
 
