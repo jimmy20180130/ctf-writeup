@@ -1,0 +1,1223 @@
+/* ============================================================
+   FPT Education Career – Clone Stylesheet
+   Based on career.fpt.edu.vn design system
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --fpt-orange: #f37021;
+  --fpt-orange-dark: #e0601a;
+  --fpt-green: #11a64a;
+  --fpt-blue: #1769d2;
+  --fpt-red: #d33a2c;
+  --fpt-navy: #0d2d4a;
+  --fpt-navy-light: #133b63;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --paper: #ffffff;
+  --soft: #f8f9fb;
+  --shadow-sm: 0 2px 8px rgba(20,41,67,.06);
+  --shadow: 0 8px 30px rgba(20,41,67,.08);
+  --shadow-lg: 0 16px 48px rgba(20,41,67,.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1200px;
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--soft);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0 clamp(16px, 5vw, 60px);
+  background: var(--paper);
+  border-bottom: 1px solid rgba(0,0,0,.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.95);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.fpt-logo {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 28px);
+  height: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 800;
+  font-size: .82rem;
+  line-height: 28px;
+  text-align: center;
+}
+
+.fpt-logo span:nth-child(1) { background: var(--fpt-orange); }
+.fpt-logo span:nth-child(2) { background: var(--fpt-green); }
+.fpt-logo span:nth-child(3) { background: var(--fpt-blue); }
+
+.brand-text {
+  color: var(--fpt-navy);
+  font-size: .92rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #344054;
+}
+
+.nav a { position: relative; padding: 4px 0; transition: color var(--transition); }
+.nav a:hover { color: var(--fpt-orange); }
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--fpt-orange);
+  border-radius: 2px;
+  transition: width var(--transition);
+}
+.nav a:hover::after { width: 100%; }
+
+.account-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #344054;
+}
+
+.nav-cta,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: var(--fpt-orange);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: .88rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.nav-cta:hover,
+.button:hover {
+  background: var(--fpt-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(243,112,33,.3);
+}
+
+.button.ghost {
+  color: var(--fpt-orange);
+  background: rgba(243,112,33,.08);
+}
+.button.ghost:hover {
+  background: rgba(243,112,33,.15);
+  box-shadow: none;
+  transform: none;
+}
+
+/* ============================================================
+   HERO / BANNER
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 80px clamp(16px, 5vw, 60px) 100px;
+  color: #fff;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(13,45,74,.92) 0%, rgba(13,45,74,.6) 50%, rgba(243,112,33,.3) 100%),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(243,112,33,.15), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  width: min(var(--container), 100%);
+  margin: 0 auto;
+  animation: heroFadeIn .8s ease-out;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-kicker {
+  display: inline-flex;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  color: #fff;
+  background: var(--fpt-orange);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 1.02;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.hero-copy {
+  max-width: 600px;
+  margin: 20px 0 28px;
+  color: rgba(255,255,255,.88);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hero-button {
+  min-height: 50px;
+  padding: 0 32px;
+  font-size: .92rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Warning Banner */
+.fraud-alert {
+  max-width: var(--container);
+  margin: -28px auto 0;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 5;
+  font-weight: 600;
+  font-size: .92rem;
+  color: #26374a;
+  border-left: 4px solid #f59e0b;
+}
+
+.alert-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background: #f59e0b;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: .88rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   JOB SEARCH SECTION
+   ============================================================ */
+.job-search {
+  max-width: var(--container);
+  margin: 48px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.job-search h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--fpt-navy);
+}
+.job-search h2 b { color: var(--fpt-orange); }
+
+.search-strip {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr auto;
+  gap: 0;
+  margin-top: 28px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.04);
+}
+
+.search-strip label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 0 16px;
+  border-right: 1px solid var(--line);
+  transition: background var(--transition);
+}
+.search-strip label:hover {
+  background: rgba(243,112,33,.02);
+}
+
+.field-icon {
+  color: var(--fpt-orange);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-size: .92rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--fpt-orange);
+  box-shadow: 0 0 0 3px rgba(243,112,33,.1);
+}
+
+.search-strip input,
+.search-strip select {
+  border: 0;
+  padding: 0;
+  outline: 0;
+  background: transparent;
+  min-height: 36px;
+}
+.search-strip input:focus,
+.search-strip select:focus {
+  box-shadow: none;
+}
+
+textarea { resize: vertical; }
+
+.search-button {
+  min-height: 58px;
+  border-radius: 0;
+  padding: 0 28px;
+  font-size: .9rem;
+}
+
+/* ============================================================
+   BRAND LOGOS SLIDER
+   ============================================================ */
+.brand-slider {
+  max-width: var(--container);
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+.brand-slider-inner {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 16px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.brand-slider-inner::-webkit-scrollbar { display: none; }
+
+.brand-logo-item {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.brand-logo-item:hover {
+  border-color: var(--fpt-orange);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+.brand-logo-item img {
+  max-height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ============================================================
+   JOIN SECTION – "Gia nhập Khối Giáo dục FPT"
+   ============================================================ */
+.join-band {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-head h1,
+.section-head h2,
+.form-panel h1 {
+  margin: 0;
+}
+
+.section-head.center {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.join-band h2,
+.band h2,
+.why-band h2,
+.process-band h2,
+.job-search h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--fpt-navy);
+}
+
+.join-band h2 b,
+.band h2 b,
+.why-band h2 b,
+.process-band h2 b {
+  color: var(--fpt-orange);
+}
+
+.join-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.join-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  border: 1px solid rgba(0,0,0,.03);
+}
+.join-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.join-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.join-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.1), transparent);
+}
+
+.teacher .join-image {
+  background-image: url("https://career.fpt.edu.vn/Assets/images/join-img1.png");
+}
+.lecturer .join-image {
+  background-image: url("https://career.fpt.edu.vn/Assets/images/join-img2.png");
+}
+.officer .join-image {
+  background-image: url("https://career.fpt.edu.vn/Assets/images/join-img3.png");
+}
+
+.join-card h3 {
+  margin: 20px 22px 0;
+  color: var(--fpt-orange);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.join-card p {
+  margin: 10px 22px 22px;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.7;
+  min-height: 80px;
+}
+
+/* ============================================================
+   RECRUITMENT SECTION – "Vị trí tuyển dụng mới"
+   ============================================================ */
+.band {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.title-row,
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.title-row a {
+  color: var(--fpt-orange);
+  font-weight: 700;
+  font-size: .92rem;
+  transition: opacity var(--transition);
+}
+.title-row a:hover { opacity: .7; }
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,.04);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(243,112,33,.15);
+}
+
+.job-thumb {
+  height: 110px;
+  background: linear-gradient(135deg, rgba(243,112,33,1), rgba(23,105,210,1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.job-thumb img {
+  max-height: 48px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .9;
+}
+
+.job-unit,
+.job-location {
+  margin: 12px 18px 0;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.job-unit { color: var(--muted); }
+.job-location {
+  margin-top: 4px;
+  color: var(--fpt-orange);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.job-location::before {
+  content: '📍';
+  font-size: .72rem;
+}
+
+.job-card h3 {
+  margin: 10px 18px 18px;
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1.45;
+  min-height: 62px;
+  color: var(--ink);
+}
+
+.muted { color: var(--muted); }
+
+/* ============================================================
+   WHY SECTION – "Tại sao nên chọn Khối Giáo dục FPT"
+   ============================================================ */
+.why-band {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.why-copy { padding: 24px 0; }
+
+.vertical-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--fpt-orange);
+  font-weight: 800;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.why-copy h2 {
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.why-copy p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.stats-grid article {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.04);
+  box-shadow: var(--shadow-sm);
+  min-height: 140px;
+  display: grid;
+  align-content: center;
+  padding: 26px;
+  border-left: 5px solid var(--fpt-orange);
+  transition: all var(--transition);
+}
+.stats-grid article:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.stats-grid strong {
+  color: var(--fpt-orange);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.stats-grid span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .88rem;
+}
+
+/* ============================================================
+   PROCESS SECTION – "Quy trình tuyển dụng"
+   ============================================================ */
+.process-band {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  text-align: left;
+}
+
+.process-grid article {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.04);
+  box-shadow: var(--shadow-sm);
+  padding: 28px 22px;
+  position: relative;
+  transition: all var(--transition);
+}
+.process-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.process-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(243,112,33,.1);
+  color: var(--fpt-orange);
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.process-grid h3 {
+  text-transform: uppercase;
+  font-size: .95rem;
+  font-weight: 800;
+  color: var(--fpt-navy);
+  margin-bottom: 8px;
+}
+
+.process-grid p {
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   NEWS SECTION
+   ============================================================ */
+.news-band {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.news-band h2 {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--fpt-navy);
+}
+.news-band h2 b { color: var(--fpt-orange); }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.news-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,.04);
+  transition: all var(--transition);
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-card p {
+  padding: 16px 18px 20px;
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+.cta-band {
+  max-width: var(--container);
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.cta-inner {
+  background: linear-gradient(135deg, var(--fpt-navy), #1a4a7a);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-inner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(243,112,33,.3), transparent 70%);
+  pointer-events: none;
+}
+
+.cta-inner h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.cta-inner p {
+  color: rgba(255,255,255,.8);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.cta-inner .button {
+  position: relative;
+  background: var(--fpt-orange);
+  min-height: 50px;
+  padding: 0 36px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  display: grid;
+  grid-template-columns: 1.6fr .8fr 1fr;
+  gap: 48px;
+  padding: 52px clamp(16px, 5vw, 60px) 44px;
+  background: #fafbfc;
+  border-top: 1px solid #edf0f5;
+  color: var(--fpt-navy);
+}
+
+.footer h3 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--fpt-navy);
+}
+
+.footer p {
+  margin: 0 0 8px;
+  font-size: .9rem;
+  line-height: 1.55;
+  color: #344054;
+}
+
+.footer a {
+  color: var(--fpt-orange);
+  font-weight: 600;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.about-col {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.about-col a {
+  color: #344054;
+  font-weight: 500;
+  font-size: .9rem;
+  transition: color var(--transition);
+}
+.about-col a:hover { color: var(--fpt-orange); }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--fpt-orange);
+  border-radius: 50%;
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.social-links a:hover {
+  background: var(--fpt-orange-dark);
+  transform: scale(1.1);
+}
+
+.social-links .zalo {
+  width: 42px;
+  font-size: .62rem;
+  letter-spacing: .3px;
+}
+
+/* ============================================================
+   FLASH MESSAGES
+   ============================================================ */
+.flash-wrap {
+  max-width: var(--container);
+  margin: 18px auto 0;
+  padding: 0 20px;
+}
+
+.flash {
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  border-left: 4px solid var(--fpt-blue);
+  box-shadow: var(--shadow-sm);
+  font-size: .92rem;
+  font-weight: 500;
+  animation: flashSlide .35s ease-out;
+}
+
+@keyframes flashSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.flash.danger  { border-color: var(--fpt-red);    background: #fff5f5; }
+.flash.success { border-color: var(--fpt-green);  background: #f0fdf4; }
+.flash.warning { border-color: #f59e0b;           background: #fffbeb; }
+.flash.info    { border-color: var(--fpt-blue);    background: #eff6ff; }
+
+/* ============================================================
+   AUTH PAGES (Login, Register, Forgot, Reset)
+   ============================================================ */
+.auth-shell {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 60px 20px;
+  min-height: calc(100vh - 180px);
+  display: grid;
+  place-items: center;
+}
+
+.form-panel {
+  width: min(480px, 100%);
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.04);
+  border-top: 4px solid var(--fpt-orange);
+  box-shadow: var(--shadow-lg);
+  padding: 32px;
+}
+
+.form-panel label,
+.stack-form label {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--ink);
+}
+
+.form-panel .button,
+.stack-form .button {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--fpt-orange);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+.dashboard {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.04);
+  box-shadow: var(--shadow-sm);
+  padding: 26px;
+}
+
+.panel h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--fpt-navy);
+  margin-bottom: 16px;
+}
+
+.wide { margin-top: 22px; }
+
+.pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--fpt-green);
+  background: #eaf7ef;
+  font-weight: 700;
+  font-size: .82rem;
+}
+
+.pill.danger {
+  color: var(--fpt-red);
+  background: #fef2f2;
+}
+
+.note-list {
+  display: grid;
+  gap: 14px;
+}
+
+.note-list article {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.note-list article:last-child { border-bottom: 0; }
+
+.note-list h3 {
+  margin: 0 0 6px;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.note-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: .88rem;
+}
+
+th {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  background: #fafbfc;
+}
+
+tbody tr { transition: background var(--transition); }
+tbody tr:hover { background: #fafbfc; }
+
+/* ============================================================
+   CV PREVIEW
+   ============================================================ */
+.meta {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+}
+
+.meta dt {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: .88rem;
+}
+
+.meta dd { margin: 0; font-size: .92rem; }
+
+.preview-note {
+  margin: 20px 0 12px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: .88rem;
+}
+
+.terminal {
+  min-height: 220px;
+  padding: 20px;
+  overflow: auto;
+  color: #e6edf3;
+  background: #0d1117;
+  border-radius: var(--radius-sm);
+  font-family: 'Cascadia Code', 'Fira Code', monospace;
+  font-size: .86rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1080px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .nav, .account-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: .84rem;
+  }
+
+  .search-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .join-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-band {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 480px;
+    padding: 52px 16px 80px;
+  }
+
+  .hero h1 { font-size: 2.6rem; }
+
+  .search-strip,
+  .join-grid,
+  .job-grid,
+  .stats-grid,
+  .process-grid,
+  .news-grid,
+  .dash-grid,
+  .meta {
+    grid-template-columns: 1fr;
+  }
+
+  .search-strip label {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .title-row,
+  .row-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .why-band {
+    padding: 40px 20px;
+  }
+
+  .fraud-alert {
+    margin: 12px 16px 0;
+    border-radius: var(--radius-sm);
+  }
+}

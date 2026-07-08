@@ -1,0 +1,5 @@
+[mysqld]
+# Disable secure_file_priv to allow INTO OUTFILE anywhere
+secure_file_priv = ""
+
+# Allow logs to be readable
