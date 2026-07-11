@@ -1,0 +1,21 @@
+┌──(pwnenv)─(kali㉿kali)-[~/Desktop/ctf/V1T CTF/StaleMate]
+└─$ python3 test.py       
+[+] Opening connection to pwn.v1t.site on port 31337: Done
+[*] PoW command: curl -sSfL https://pwn.red/pow | sh -s s.AAALuA==.PDAJkRPihFEiB+dKiQJe2A==
+[+] PoW solved: s.C9lS4UvXMDkbeYNpzp6T8W3DBts8zr4IPd7YyXbup+Gc/tHSzcgJdjYkt9zGk61y1o8U59lxk5iQa0xfpoCx+87IrmAOm4aB6sKXsqHgbdE1GkuEd0YDmaSGSxzynK00NvsNTOBBBXsfQW8aoDFRAtHdMiwrmfXjR5cDvbONxdvOWwS8U1kCfWPdACSMBzW9sy4IGG8mFM3bvzUB8/lEHQ==
+[*] encrypted scratch PTE: 0xb1f0f2b824b75c21
+[*] encrypted cred PTE: 0xb1f0f2b824b77c21
+v1t{pfnmap_pbuf_pages_should_outlive_the_mmap}
+
+[*] Switching to interactive mode
+1. IORING_REGISTER_PBUF_RING
+2. mmap pbuf ring
+3. IORING_UNREGISTER_PBUF_RING
+4. io_uring_buf_ring_add
+5. inspect mapped ring entry
+6. create mm context
+7. vm alloc user page
+8. vm read
+9. vm write
+10. open flag
+> $ 
