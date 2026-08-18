@@ -1,0 +1,5 @@
+title,author,rating
+"CREATE TABLE ""bjB0aDFuZ190MF9zMzNfaDNyMw=="" (
+            name  TEXT PRIMARY KEY,
+            value TEXT NOT NULL
+        )",,
