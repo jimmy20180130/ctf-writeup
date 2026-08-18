@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body %}
+
+<section>
+  <p class="eyebrow"><span>Restore from archive</span></p>
+  <form method="post" action="/restore" enctype="multipart/form-data" class="row">
+    <input type="file" name="archive" required>
+    <button type="submit">Restore</button>
+  </form>
+  <p class="fineprint">
+    Accepted: .zip &middot; .tar &middot; .tar.gz &middot; .tgz &middot; .tar.bz2 &middot; .tar.xz
+  </p>
+</section>
+
+<section>
+  {% if entries %}
+    <table>
+      {% for e in entries %}
+        <tr class="{{ 'is-link' if e.kind == 'link' }}">
+          <td class="tag">{{ e.kind }}</td>
+          <td class="name">
+            {% if e.kind == 'file' %}
+              <a href="/view?path={{ e.rel|urlencode }}">{{ e.rel }}</a>
+            {% else %}
+              {{ e.rel }}
+            {% endif %}
+          </td>
+          <td class="meta">{{ e.info }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p class="empty">Nothing here yet.</p>
+  {% endif %}
+</section>
+
+<section>
+  <p class="eyebrow"><span>Snapshot</span></p>
+  <div class="row">
+    <form method="get" action="/snapshot"><button type="submit">Take snapshot</button></form>
+    <form method="post" action="/reset"><button type="submit" class="ghost">Clear files</button></form>
+  </div>
+  <p class="fineprint">Packs everything above into snapshot.zip.</p>
+</section>
+
+{% endblock %}
